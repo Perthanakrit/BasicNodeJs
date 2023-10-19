@@ -5,7 +5,7 @@ const morgan = require('morgan'); // morgan is a package to log the request in t
 const path = require('path'); // path is a package to get the path of the file
 
 const app = express();
-const port = 3002;
+const PORT = process.env.PORT;
 
 app.use(morgan("combined")); // .use is the method to use the package, combined is the format of the log in the console
 
@@ -18,6 +18,6 @@ app.get("/", (req,res) => { // "/" is the root path, .get is the method to get t
     res.send("Hello World my app"); // res is the response from the server
 }) 
 
-app.listen(port, () => { // .listen is the method to listen to the port 3002 and run the server on that port 
-    debug(`Server is running on port ${chalk.green(port)}`);
+app.listen(PORT, () => { // .listen is the method to listen to the port 3002 and run the server on that port 
+    debug(`Server is running on port ${chalk.green(PORT)}`);
 })
