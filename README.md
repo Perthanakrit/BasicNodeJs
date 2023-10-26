@@ -48,3 +48,7 @@ package.json
     	res.render('projects',projects);
     }) // .route is the method to set the path of the middleware
     app.use("/projects", projectRouter);
+
+### Connecting with Database
+
+### **_Load balacing_**
