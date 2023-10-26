@@ -32,8 +32,19 @@ package.json
     			"debug": "set DEGUP-DEBUG=* & nodemon ./ExpressJS/app.js",
     			"test": "echo \"Error: no test specified\" && exit 1" },
 
-## Template Engine
+##
 
 ### EJS
 
     npm install ejs
+
+### Express routing
+
+[More about express routing](https://expressjs.com/en/guide/routing.html)
+
+    const  projectRouter  =  express.Router();
+
+    projectRouter.route("/").get((req,res) => {
+    	res.render('projects',projects);
+    }) // .route is the method to set the path of the middleware
+    app.use("/projects", projectRouter);

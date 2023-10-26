@@ -6,6 +6,7 @@ const path = require('path'); // path is a package to get the path of the file
 
 const app = express();
 const PORT = process.env.PORT;
+const projectsRouter = require('./src/router/productsRouter'); // projectsRouter is the middleware
 
 app.use(morgan("combined")); // .use is the method to use the package, combined is the format of the log in the console
 // express.static is the method to use the static file,
@@ -18,9 +19,9 @@ app.set('view engine', 'ejs');
 app.get("/", (req,res) => { // "/" is the root path, .get is the method to get the data from the server
     // req is the request from the client
     res.render('index', {username: "PerTRA",  cutomers:["a","b","c"]}); // res is the response from the server
-}) 
+})
 
-
+app.use("/projects", projectsRouter); // .use is the method to use the middleware, "/products" is the path of the middleware, productRoute is the middleware
 
 app.listen(PORT, () => { // .listen is the method to listen to the port 3002 and run the server on that port 
     debug(`Server is running on port ${chalk.green(PORT)}`);

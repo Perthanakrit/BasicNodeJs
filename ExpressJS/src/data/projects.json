@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Project 1",
+    "type": "Web Dev",
+    "image": "images/user-images/user-2.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Project 2",
+    "type": "Game Dev",
+    "image": "images/user-images/user-1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Project 3",
+    "type": "Embedded System",
+    "image": "images/user-images/user-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Project 4",
+    "type": "Mobile App",
+    "image": "images/user-images/user-1.jpg"
+  }
+]
